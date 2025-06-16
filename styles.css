@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f8f5ff;
   padding: 5px 10px 1px 10px;
-  height: 500px;
+  min-height: 560px;
+  font-family: sans-serif;
 }
 
 #title {
@@ -13,10 +14,23 @@ body {
   width: 150px;
 }
 
+#logo {
+  cursor: pointer;
+}
+
+#logo:hover {
+  transform: scale(1.02); /* Grows by 10% */
+  /* filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3)); */
+}
+
 #credits {
   position: absolute;
   bottom: 1%;
   right: 36%;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: system-ui;
+  color: gray;
 }
 
 #card {
@@ -69,11 +83,10 @@ body {
 }
 
 #notesContainer {
-  width: 350px;
-  height: 430px;
+  width: 380px;
+  height: 400px;
   overflow-y: scroll;
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
 
 #notesContainer::-webkit-scrollbar {
@@ -86,7 +99,7 @@ body {
   z-index: 10; /* Ensure tooltip is above the card */
 }
 
-.tooltip .tooltiptext {
+.tooltip .tooltiptextGoToBtn {
   visibility: hidden;
   background-color: #333;
   color: #fff;
@@ -104,7 +117,26 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip .tooltiptextDelBtn {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 7%;
+  left: 75.3%;
+  transform: translateX(-80%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip:hover .tooltiptextGoToBtn,
+.tooltip:hover .tooltiptextDelBtn {
   visibility: visible;
   opacity: 1;
 }
@@ -120,4 +152,62 @@ body {
   height: 24px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  margin: 0px 5px;
+}
+#dropdownIcon:hover {
+  transform: scale(1.1); /* Grows by 10% */
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+#spanEl {
+  color: #85859d;
+  left: 5%;
+  top: 30%;
+  position: absolute;
+  font-size: 16px;
+}
+
+.deleteBtn {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  top: 53%;
+  right: 47%;
+  transition: transform 0.2s ease-in-out, filter 0.2s;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  transform: scale(1.1); /* Grows by 10% */
+  filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.3));
+}
+
+#youtubeHeaderText {
+  cursor: pointer;
+}
+
+#youtubeHeaderText:hover {
+  text-decoration: underline;
+}
+
+#gettingStartedDiv {
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: 104px;
+  font-family: "system-ui", sans-serif;
+  background: #75c675;
+  color: white;
+  width: 233px;
+  height: 100px;
+  margin-left: 17.7%;
+  border-radius: 0.8rem;
+}
+
+#gettingStartedDiv:hover {
+  background: #6bb66b;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 }

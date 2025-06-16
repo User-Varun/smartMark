@@ -11,7 +11,8 @@
     {
       "js": ["contentScriptForYoutube.js"],
       "matches": ["https://www.youtube.com/*"],
-      "run_at": "document_end"
+      "run_at": "document_end",
+      "type": "module"
     }
   ],
   "icons": {

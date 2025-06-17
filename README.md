@@ -1,5 +1,8 @@
 # 📌 SmartMark – YouTube Marker Extension
 
+![image](https://github.com/user-attachments/assets/fde14946-9c87-4187-a511-f2de840ba9aa)
+
+
 **SmartMark** is a lightweight Chrome extension that lets you **mark specific timestamps on YouTube videos** and view/manage them later from a sleek popup.
 
 ---
